@@ -1,3 +1,9 @@
-export function Heading(){
-    return  <h1 className="heading">Olá mundo!</h1>
+import style from './Heading.module.css'
+
+export function Heading(props){
+    console.log(props)
+    return  <h1 className={`${style.heading}`}>
+        {props.children}
+    </h1>
 }
+
