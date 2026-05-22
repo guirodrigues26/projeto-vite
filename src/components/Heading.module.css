@@ -1,9 +1,12 @@
 .heading{
-    background: #bc53c2;
-    color: #d5d5d5;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+
 
 }
 
 .paragraph{
-    color: black;
+    color: var(--primary-light);
 }
