@@ -1,13 +1,14 @@
-import style from './Heading.module.css'
-
-    type HeadingProps = {
-        children: React.ReactNode;
-      
-      
+import style from './styles.module.css'
+ 
+     type HeadingProps = {
+          children: React.ReactNode;
     };
-    
-    export function Heading({children}: HeadingProps){
-    return  <h1 className={`${style.heading}} ${style.paragraph}`}>
-        {children}
-    </h1>
+ 
+ 
+export function Heading({children}: HeadingProps){
+ 
+      return <h1 className= {`${style.heading} ${style.paragraph}`} >
+          {children}
+      </h1>
 }
+    

@@ -1,12 +1,16 @@
 .heading{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2.4rem;
-
-
+   background-image: url(https://i.pinimg.com/736x/68/36/32/68363232aa64bf00982f69c2641d122f.jpg);
+   justify-content: center;
+   color: #998;  
+ 
+ 
 }
-
+ 
 .paragraph{
-    color: var(--primary-light);
+    color: var(--primary-light)
+   
+}
+ 
+p{
+    text-align: center;
 }

@@ -1,13 +1,15 @@
-import style from './Container.module.css'
-
+import style from './styles.module.css'
+ 
 type ContainerProps = {
     children: React.ReactNode;
 }
-
+ 
 export function Container({children}: ContainerProps){
-    return(
+     return (
         <div className={style.container}>
-                 <div className={style.content}>{children}  </div>
-</div>
-    )
+        <div className={style.content}>
+                   <div className={style.content}>{children}</div>
+            </div>
+       </div>        
+     )
 }
