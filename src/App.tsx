@@ -1,36 +1,29 @@
-import { Container } from "./components/Container"
-import "./styles/global.css"
-import "./styles/theme.css"
-
+import { Container } from './components/Container';
+import { Heading } from './components/Heading';
+import {CountDown} from './components/CountDown';
+import {Menu} from './components/Menu';
+import {Logo} from './components/Logo';
+ 
 export function App(){
-    console.log("Olá Mundo")
-    return(
+ 
+  return (
         <>
-           <Container>
-                     <section>
-                         <p>LOGO</p>
-                    </section>
-            </Container>    
-
             <Container>
-                     <section>
-                         <p>MENU</p>
-                    </section>
-            </Container>    
-
+                <Logo />
+            </Container>
+           
+            <Container>
+                <Menu/>
+            </Container>
+ 
              <Container>
-                     <section>
-                         <p>FORM</p>
-                    </section>
-            </Container>    
-
+                 <CountDown/>
+             </Container>
+ 
             <Container>
-                     <section>
-                         <p>FOOTER</p>
-                    </section>
-            </Container>    
-
-
-</>
-    )
+                <Heading>FOOTER</Heading>
+            </Container>
+   
+        </>
+  );
 }
