@@ -4,10 +4,16 @@ import {CountDown} from './components/CountDown';
 import {Menu} from './components/Menu';
 import {Logo} from './components/Logo';
 import { DefaultInput } from './components/DefaultInput'; 
+import { Cycles } from './components/Cycles';
+import { DefaultButton } from './components/DefaultButton';
+import { Icon, PlayCircle, PlayCircleIcon } from 'lucide-react';
+
 <DefaultInput
 labelText='Task'
 id="myInput"
 type='text'
+placeholder='Enter your task'
+required    
 />
 
 export function App(){
@@ -55,6 +61,9 @@ export function App(){
             <button type="submit">Add Task</button>
         </div>
     </form>
+        <div className='formRow'>
+        <Cycles></Cycles>
+        </div>
 </Container>
 
 
