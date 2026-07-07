@@ -1,3 +1,5 @@
+import { DefaultButton } from './components/DefaultButton';
+import { Icon, PauseCircleIcon, PlayCircle, PlayCircleIcon } from 'lucide-react';
 import { Container } from './components/Container';
 import { Heading } from './components/Heading';
 import {CountDown} from './components/CountDown';
@@ -5,8 +7,15 @@ import {Menu} from './components/Menu';
 import {Logo} from './components/Logo';
 import { DefaultInput } from './components/DefaultInput'; 
 import { Cycles } from './components/Cycles';
-import { DefaultButton } from './components/DefaultButton';
-import { Icon, PlayCircle, PlayCircleIcon } from 'lucide-react';
+import { useState } from 'react';
+import { Footer } from './components/Footer';
+
+type CycleType = 'work'| 'short'| 'long';
+const [timeLeft, setTimeLeft] = useState(25 * 60); // 25 minutos em segundos
+const [isRunning, setIsRunning] = useState(false);
+const [currentType, setCurrentType] = useState<CycleType>('work');
+const [completedCycles, setCompletedCycles] = useState(0);
+const [task, setTask] = useState('');
 
 <DefaultInput
 labelText='Task'
@@ -39,7 +48,7 @@ export function App(){
             <Container>
     <CountDown />
 </Container>
-
+    
 <Container>
     <form className="form" action="">
         <div className="formRow">
@@ -56,6 +65,12 @@ export function App(){
             <p>Ciclos</p>
             <p>0 0 0 0 0 0</p>
         </div>
+
+        <DefaultButton
+        icon={<PauseCircleIcon/>}
+        color="red"
+        disabled={isRunning}
+        />
 
         <div className="formRow">
             <button type="submit">Add Task</button>
