@@ -27,7 +27,7 @@ export function App() {
 
         <CountDown />
 
-       { <form className="form" action="">d
+        <form className="form" action="">
           <div className="formRow">
             <DefaultInput type="number" id="focus" value={25}>
               Foco (min):
@@ -52,6 +52,7 @@ export function App() {
           <Cycles />
         </div>
       </Container>
+
 
       {/* Footer */}
       <Footer />
