@@ -1,5 +1,11 @@
 import Style  from "./styles.module.css";
 import { HistoryIcon,SettingsIcon,SunIcon,TimerIcon } from "lucide-react";
+import { ThemeToggle } from './components/ThemeToggle';
+
+// Exemplo dentro do seu Header
+<div className="header-actions">
+    <ThemeToggle />
+</div>
  
 export function Menu() {
      return (
