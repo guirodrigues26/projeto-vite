@@ -9,6 +9,11 @@ import { DefaultInput } from './components/DefaultInput';
 import { Cycles } from './components/Cycles';
 import { useState } from 'react';
 import { Footer } from './components/Footer';
+import { Home } from "./pages/Home";
+
+export function App() {
+    return <Home />;
+}
 
 
 export function App() {
