@@ -1,6 +1,8 @@
 // This file defines the TaskModel type, which represents a task in the
 // application.
 
+import { TaskStateModel } from "./TaskStateModel";
+
 export type TaskModel = {
     id: string;
     name: string;

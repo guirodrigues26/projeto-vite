@@ -1,13 +1,23 @@
+import { forwardRef } from "react";
+
 type DefaultInputProps = {
   id: string;
-  labelText?: string; // <-- Prop opcional
-} & React.ComponentProps<'input'>;
+  labelText?: string;
+} & React.ComponentProps<"input">;
 
-export function DefaultInput({ id, type, labelText }: DefaultInputProps) {
-  return (
-    <div>
-      {labelText && <label htmlFor={id}>{labelText}</label>}
-      <input id={id} type={type} />
-    </div>
-  );
-}
+export const DefaultInput = forwardRef<HTMLInputElement, DefaultInputProps>(
+  function DefaultInput({ id, type, labelText, ...props }, ref) {
+    return (
+      <div>
+        {labelText && <label htmlFor={id}>{labelText}</label>}
+
+        <input
+          id={id}
+          type={type}
+          ref={ref}
+          {...props}
+        />
+      </div>
+    );
+  }
+);
