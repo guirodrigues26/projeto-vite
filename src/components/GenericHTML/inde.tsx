@@ -5,5 +5,7 @@ type GenericHTMLProps = {
 };
 
 export function GenericHTML({ children }: GenericHTMLProps) {
-  return <div className={styles.genericHTML}>{children}</div>;
+  return (
+  <div className={styles.genericHTML}>{children}</div>
+  );
 }
